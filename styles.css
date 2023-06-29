@@ -1,0 +1,104 @@
+:root {
+  --g3: 209, 213, 219; /* gray-300 */
+  --g4: 156, 163, 175; /* gray-400 */
+  --g8: 31, 41, 55; /* gray-800 */
+  --g9: 17, 24, 39; /* gray-900 */
+  --g95: 3, 7, 18; /* gray-950 */
+
+  --v4: 167, 139, 250; /* violet-400 */
+  --v5: 139, 92, 246; /* violet-500 */
+  --v8: 91, 33, 182; /* violet-900 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  background-color: rgb(var(--g9));
+  font-family: "Montserrat", sans-serif;
+  color: rgb(var(--g4));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 95vw;
+  max-width: 448px;
+  background-color: rgba(var(--g8), 0.3);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1 {
+  color: rgb(var(--g3));
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+input {
+  background-color: rgba(var(--g95), 0.3);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: rgb(var(--g3));
+}
+
+input::placeholder {
+  color: rgb(var(--g4));
+}
+
+input:focus {
+  outline: none !important;
+  border: 1px solid rgb(var(--v4));
+}
+
+#password {
+  margin-bottom: -1rem;
+}
+
+#forgot {
+  text-align: right;
+}
+
+a {
+  color: rgb(var(--v5));
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+a:is(:hover, :focus) {
+  color: rgb(var(--v4));
+}
+
+button {
+  font-weight: 600;
+  color: rgb(var(--g9));
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgb(var(--v5));
+  transition: all 500ms;
+}
+
+button:is(:hover, :focus) {
+  background-color: rgb(var(--v4));
+  cursor: pointer;
+  /* border: 1px solid rgb(221 214 254); */
+  box-shadow: rgba(var(--v8), 0.35) 0px 5px 15px;
+  transform: translateY(-2px);
+}
